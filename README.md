@@ -42,11 +42,6 @@ npm run dev
 Open http://localhost:3000, enter the access code, then paste a free Tiingo
 API key in **Settings**.
 
-## Deploy to Vercel
-
-1. Push this folder to a Git repo (or run `npx vercel` in it).
-2. Import into [Vercel](https://vercel.com/new) — it auto-detects Next.js.
-3. Deploy. There are **no environment variables to configure.**
 
 ## Requirements & notes
 
