@@ -51,6 +51,7 @@ API key in **Settings**.
 - AI features (AI-written briefs, research, KPI sourcing, call extraction) are
   optional and require the user's own [OpenRouter](https://openrouter.ai) key.
   The default model is `google/gemini-3.7-flash`.
+- Scraping features require an evomi residential proxy account.
 - `legacy-python/` is an earlier standalone Python export of the research
   pipeline; it is unrelated to this web app and can be ignored or removed.
 
