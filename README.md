@@ -39,6 +39,8 @@ npm install
 npm run dev
 ```
 
+**ACCESS CODE**: Quant-Illinois-2026
+
 Open http://localhost:3000, enter the access code, then paste a free Tiingo
 API key in **Settings**.
 
