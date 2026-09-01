@@ -1,0 +1,8 @@
+# Run artifacts (local data, not part of the source)
+runs/
+__pycache__/
+*.pyc
+
+# There are deliberately NO secrets in this repo:
+# the OpenRouter API key is entered in the UI and stored in the user's
+# HOME directory (~/.gff_research_config.json), never inside this folder.

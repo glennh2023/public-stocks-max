@@ -1,0 +1,137 @@
+/* Ported from StocksMax `DashboardGrid.module.css`, adapted to the sandbox
+   theme variables. */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  margin-bottom: 4px;
+}
+
+.toolbarSpacer {
+  flex: 1;
+}
+
+.toolbarLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.toolbarInput {
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+.toolbarSelect {
+  appearance: none;
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 28px 6px 12px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn,
+.btnPrimary,
+.btnDanger {
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn:hover { background: var(--border); }
+
+.btnPrimary {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: var(--accent);
+}
+.btnPrimary:hover { background: rgba(16, 185, 129, 0.3); }
+
+.btnDanger {
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.35);
+  color: var(--danger);
+}
+
+.gridArea {
+  padding: 4px 0;
+  overflow-x: auto;
+}
+
+.gridArea :global(.react-grid-item) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 240px;
+}
+
+.removeBadge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--danger);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.removeBadge:hover { background: rgba(248, 113, 113, 0.25); }
+
+.widgetCard {
+  height: 100%;
+  overflow: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.widgetBody {
+  flex: 1;
+  min-height: 0;
+}
+
+.dragHint {
+  cursor: grab;
+  outline: 1px dashed var(--accent-dim);
+}

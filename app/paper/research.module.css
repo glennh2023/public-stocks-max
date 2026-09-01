@@ -1,0 +1,261 @@
+/* Ported from StocksMax `research.module.css`. The report ("paper") is
+   deliberately styled like a printed research note — white page, serif body —
+   independent of the app theme, because its destination is a PDF. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel2);
+  color: var(--text);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.grow { flex: 1 1 280px; }
+.grow textarea { width: 100%; resize: vertical; font-family: inherit; }
+
+.buildBtn {
+  border: none;
+  border-radius: 8px;
+  background: var(--accent-dim);
+  color: #04110c;
+  font-weight: 600;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+.buildBtn:disabled { opacity: 0.6; cursor: wait; }
+
+.pdfBtn {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  padding: 9px 16px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.agentRow {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--border);
+}
+
+.agentRowLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.styleSelect {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel2);
+  color: var(--text);
+  padding: 7px 10px;
+  font-size: 0.85rem;
+}
+
+.agentCheck {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.agentStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--muted);
+}
+.agentDone { color: var(--accent); border-color: var(--accent-dim); }
+.agentBusy { color: var(--warn); border-color: var(--warn); }
+
+.errorBox {
+  border: 1px solid var(--danger);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: var(--danger);
+  background: var(--panel);
+  font-size: 0.85rem;
+}
+
+/* ---------------- the paper ---------------- */
+
+.paper {
+  background: #ffffff;
+  color: #1a202c;
+  border-radius: 6px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 64px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.paper :global(h3) {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 0.95rem;
+  margin: 1.4em 0 0.5em;
+  color: #111827;
+}
+.paper :global(p) { margin: 0 0 0.9em; }
+.paper :global(strong) { color: #111827; }
+.paper :global(a) { color: #1d4ed8; }
+.paper :global(table) { border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+.paper :global(td),
+.paper :global(th) { border: 1px solid #d1d5db; padding: 4px 10px; }
+
+.coverEyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: #6b7280;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  margin: 0 0 6px;
+}
+
+.coverTitle {
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.coverMeta {
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0 0 18px;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.ratingBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  border-top: 2px solid #111827;
+  border-bottom: 1px solid #d1d5db;
+  padding: 14px 0;
+  margin: 0 0 26px;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.ratingItem { display: flex; flex-direction: column; gap: 2px; }
+
+.ratingLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+}
+
+.ratingValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+}
+
+.ratingBuy { color: #047857; }
+.ratingSell { color: #b91c1c; }
+.ratingHold { color: #b45309; }
+
+.sectionTitle {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 6px;
+  margin: 34px 0 14px;
+}
+
+.chartFigure { margin: 18px 0; page-break-inside: avoid; break-inside: avoid; }
+
+.chartCaption {
+  font-size: 11.5px;
+  color: #6b7280;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.chartBox { height: 260px; }
+
+.citationList {
+  font-size: 12.5px;
+  color: #4b5563;
+  padding-left: 1.2em;
+  line-height: 1.7;
+}
+.citationList a { color: #1d4ed8; text-decoration: none; }
+
+.disclaimer {
+  margin-top: 30px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 11px;
+  color: #9ca3af;
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+.savedBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Print = PDF export rules live in globals.css under `.research-paper`
+   (CSS modules forbid the global `body *` selector needed there). */
+@media print {
+  .sectionTitle { page-break-after: avoid; }
+}
